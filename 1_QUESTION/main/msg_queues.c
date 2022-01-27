@@ -70,7 +70,7 @@ void Task_5(void *sens)
 void app_main()
 {
 //	BaseType_t result;
-	sensor_queue = xQueueCreate(10, sizeof(int));
+	QUEUES = xQueueCreate(10, sizeof(int));
 	result = xTaskCreate(Task_1, "Task_1", 2048, NULL, 5, NULL);
 	if(result != pdPASS)
 	{
